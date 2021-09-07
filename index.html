@@ -58,13 +58,22 @@
       </div>
     </header>
     <!-- Header end -->
-
+    <div class="backdrop-container is-hidden" data-modal>
+      <div class="card">
+        <button class = "btn close-btn" type="button" data-modal-close>
+          <svg class="close-icon">
+            <use href="./images/icons.svg#icon-close"></use>
+          </svg>
+          <span class="visually-hidden">Close</span>
+        </button>
+      </div>
+    </div>
     <!-- Main start -->
     <main class="main">
       <section class="hero dark-bg">
         <div class="container">
           <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
-          <button type="button" class="btn base-btn">Заказать услугу</button>
+          <button type="button" class="btn base-btn" data-modal-open>Заказать услугу</button>
         </div>
       </section>
 
@@ -486,5 +495,7 @@
       </div>
     </footer>
     <!-- footer end -->
+
+    <script src="js/modal.js"></script>
   </body>
 </html>
