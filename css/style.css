@@ -214,9 +214,15 @@ img {
   color: var(--font-accent-color);
 }
 
+.link.nav-link::after {
+  opacity: 0;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .nav-link.current::after,
 .nav-link:hover::after,
 .nav-link:focus::after {
+  opacity: 1;
   position: absolute;
   bottom: calc(0% - 1px);
   border-radius: 4px;
@@ -512,8 +518,6 @@ img {
 .social-link.dark {
   background-color: rgba(255, 255, 255, 0.1);
   color: var(--font-light-color);
-
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-link.dark .icon {
